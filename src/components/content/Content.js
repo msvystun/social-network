@@ -32,7 +32,7 @@ const Content = (props) => {
                     </div>
                     <div className="col-md-7">
                         <CreatePost />
-                        <Route path="/posts" render={ () => <Posts posts={props.posts} createComment={props.createComment} /> } />
+                        <Route path="/posts" render={ () => <Posts posts={props.posts} createComment={props.createComment} updateCommentText={props.updateCommentText} /> } />
                         <Route path="/dialogs" component={() => <Dialogs dialogsData={props.dialogsData} />} />
                     </div>
                     

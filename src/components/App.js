@@ -10,7 +10,12 @@ const App = (props) => {
         <BrowserRouter>
             <div>
                 <Header />
-                <Content dialogsData={props.state.dialogsPage.dialogsData} posts={props.state.posts} createComment={props.createComment} />
+                <Content 
+                    dialogsData={props.state.dialogsPage.dialogsData} 
+                    posts={props.state.posts} 
+                    createComment={props.createComment} 
+                    updateCommentText={props.updateCommentText}
+                />
                 <Footer />
                 <div id="spinner-wrapper">
                     <div className="spinner"></div>

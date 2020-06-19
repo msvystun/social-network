@@ -68,9 +68,18 @@ let state = {
                     text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud',
                     userImage: 'images/users/user-4.jpg'
                 },
-            ]
+            ],
+            newComment: {
+                text: '',
+            }
         }
     ]
+}
+
+export let updateCommentText = (updatedCommentText, post) => {
+    post.newComment.text = updatedCommentText;
+
+    renderDom();
 }
 
 export let createComment = (comment, prevComments) => {
@@ -78,11 +87,9 @@ export let createComment = (comment, prevComments) => {
     // console.log(comment.current)
     prevComments.push({
         name: 'User',
-        text: comment.current.value,
+        text: comment,
         userImage: 'images/users/user-1.jpg'
     });
-
-    comment.current.value = '';
 
     renderDom();
 }
