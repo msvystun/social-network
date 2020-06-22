@@ -13,23 +13,20 @@
 
 index.js -- 
 <br>
-<code>
+
     import state, { subscribe } from "./redux/state";
-
-    let renderDom = () => {
-    ReactDOM.render(
-        <App 
-            state={state} 
-            createComment={createComment} 
-            updateCommentText={updateCommentText}
-        />, 
-        document.querySelector('#root')
-    );
-}
-
-renderDom()
-subscribe(renderDom);
-</code>
+        let renderDom = () => {
+        ReactDOM.render(
+            <App 
+                state={state} 
+                createComment={createComment} 
+                updateCommentText={updateCommentText}
+            />, 
+            document.querySelector('#root')
+        );
+    }
+    renderDom()
+    subscribe(renderDom);
 <br>
 
 state.js--
