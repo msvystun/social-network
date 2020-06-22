@@ -13,7 +13,7 @@
 
 index.js -- 
 <br>
-
+```
     import state, { subscribe } from "./redux/state";
         let renderDom = () => {
         ReactDOM.render(
@@ -27,6 +27,7 @@ index.js --
     }
     renderDom()
     subscribe(renderDom);
+```
 <br>
 
 state.js--
