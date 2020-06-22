@@ -1,3 +1,50 @@
+## Компонента
+
+> Компонента - це функція, яка повертає JSX розмітку. Тобто HTML всередині JS. Компоненту ніколи не викликають, Компонента - це ТЕГ.
+<hr>
+
+## SPA
+
+> SPA - Single Page Application (Все відбувається в одному HTML файлі, який в повному обємі приходить користувачу)
+
+![alt tag](https://prnt.sc/t45rq5 "SPA Lifecycle")​
+<hr>
+
+## Pattern observer - (callback, subscribe, observer)
+
+> Спостерігач — створює механізм підписки, дозволяє одним обєктам дивитись і реагувати на події, які відбуваються в інших обєктах.
+
+file index.js
+<br>
+```
+    import state, { subscribe } from "./redux/state";
+        let renderDom = () => {
+        ReactDOM.render(
+            <App 
+                state={state} 
+                createComment={createComment} 
+                updateCommentText={updateCommentText}
+            />, 
+            document.querySelector('#root')
+        );
+    }
+    renderDom()
+    subscribe(renderDom);
+```
+<br>
+
+file state.js
+<br>
+```
+    let renderDom = () => {
+        // console.log('render');
+    }
+    export let subscribe = (observer) => {
+        renderDom = observer;
+    }
+```
+<hr>
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
