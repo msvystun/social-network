@@ -1,9 +1,20 @@
-// import React from "react";
-// import ReactDOM from "react-dom";
-// import App from "./components/App";
-import state from "./redux/state";
-// import { createComment } from './redux/state';
-import { renderDom } from './render';
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./components/App";
+import state, { subscribe } from "./redux/state";
+import { createComment, updateCommentText } from './redux/state';
 
-renderDom(state);
+let renderDom = () => {
+    ReactDOM.render(
+        <App 
+            state={state} 
+            createComment={createComment} 
+            updateCommentText={updateCommentText}
+        />, 
+        document.querySelector('#root')
+    );
+}
 
+renderDom()
+
+subscribe(renderDom);

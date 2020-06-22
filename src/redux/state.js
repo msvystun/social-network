@@ -1,4 +1,6 @@
-import { renderDom } from './../render';
+let renderDom = () => {
+    // console.log('render')
+}
 
 let state = {
     dialogsPage: {
@@ -92,6 +94,10 @@ export let createComment = (comment, prevComments) => {
     });
 
     renderDom();
+}
+
+export let subscribe = (observer) => {
+    renderDom = observer;
 }
 
 export default state;
