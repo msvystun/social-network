@@ -1,11 +1,12 @@
 Компонента
 <hr>
 Компонента - це функція, яка повертає JSX розмітку. Тобто HTML всередині JS. Компоненту ніколи не викликають, Компонента - це ТЕГ.
-
+<br>
+<br>
 SPA
 <hr>
 SPA - Single Page Application (Все відбувається в одному HTML файлі, який в повному обємі приходить користувачу)
-
+![alt tag](https://prnt.sc/t45rq5 "SPA Lifecycle")​
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
