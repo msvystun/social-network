@@ -31,14 +31,13 @@ index.js --
 
 state.js--
 <br>
-<code>
-let renderDom = () => {
-    // console.log('render');
-}
-export let subscribe = (observer) => {
-    renderDom = observer;
-}
-</code>
+
+    let renderDom = () => {
+        // console.log('render');
+    }
+    export let subscribe = (observer) => {
+        renderDom = observer;
+    }
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
