@@ -12,6 +12,7 @@ Pattern observer - (callback, subscribe, observer)
 Спостерігач — створює механізм підписки, дозволяє одним обєктам дивитись і реагувати на події, які відбуваються в інших обєктах.
 
 index.js -- 
+<br>
 <code>
 import state, { subscribe } from "./redux/state";
 
@@ -29,14 +30,18 @@ let renderDom = () => {
 renderDom()
 subscribe(renderDom);
 </code>
+<br>
+
 state.js--
+<br>
+<code>
 let renderDom = () => {
     // console.log('render');
 }
 export let subscribe = (observer) => {
     renderDom = observer;
 }
-
+</code>
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
