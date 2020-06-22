@@ -7,6 +7,36 @@ SPA
 <hr>
 SPA - Single Page Application (Все відбувається в одному HTML файлі, який в повному обємі приходить користувачу)
 ![alt tag](https://prnt.sc/t45rq5 "SPA Lifecycle")​
+
+Pattern observer - (callback, subscribe, observer)
+Спостерігач — створює механізм підписки, дозволяє одним обєктам дивитись і реагувати на події, які відбуваються в інших обєктах.
+
+index.js -- 
+import state, { subscribe } from "./redux/state";
+
+let renderDom = () => {
+    ReactDOM.render(
+        <App 
+            state={state} 
+            createComment={createComment} 
+            updateCommentText={updateCommentText}
+        />, 
+        document.querySelector('#root')
+    );
+}
+
+renderDom()
+subscribe(renderDom);
+state.js--
+let renderDom = () => {
+    // console.log('render');
+}
+export let subscribe = (observer) => {
+    renderDom = observer;
+}
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
