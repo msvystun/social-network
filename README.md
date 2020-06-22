@@ -1,22 +1,22 @@
-Компонента
+##Компонента##
 <hr>
-Компонента - це функція, яка повертає JSX розмітку. Тобто HTML всередині JS. Компоненту ніколи не викликають, Компонента - це ТЕГ.
+**Компонента - це функція, яка повертає JSX розмітку. Тобто HTML всередині JS. Компоненту ніколи не викликають, Компонента - це ТЕГ.**
 <br>
 <br>
-SPA
+##SPA##
 <hr>
-SPA - Single Page Application (Все відбувається в одному HTML файлі, який в повному обємі приходить користувачу)
+**SPA - Single Page Application (Все відбувається в одному HTML файлі, який в повному обємі приходить користувачу)**
 ![alt tag](https://prnt.sc/t45rq5 "SPA Lifecycle")​
 
-Pattern observer - (callback, subscribe, observer)
-Спостерігач — створює механізм підписки, дозволяє одним обєктам дивитись і реагувати на події, які відбуваються в інших обєктах.
+##Pattern observer - (callback, subscribe, observer)
+**Спостерігач — створює механізм підписки, дозволяє одним обєктам дивитись і реагувати на події, які відбуваються в інших обєктах.
 
 index.js -- 
 <br>
 <code>
-import state, { subscribe } from "./redux/state";
+    import state, { subscribe } from "./redux/state";
 
-let renderDom = () => {
+    let renderDom = () => {
     ReactDOM.render(
         <App 
             state={state} 
